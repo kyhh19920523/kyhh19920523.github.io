@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WELCOME</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: cadetblue;
+        }
+        a{
+            color: white;
+        }
+        .banner{
+            background-image:url("images/main.jpg");
+            width:auto;
+            height: 500px;
+            text-align: center;
+            font-size: 50px;
+            color:rebeccapurple;
+            padding-top: 75px;
+        }
+        .header{
+            height: 60px;
+            margin-top: 10px;
+            padding-top: 5px;
+            background-color: royalblue;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }    
+        
+    </style>
+</head>
+<body>
+    <div class=banner>
+        <p>HOONI 홈페이지</p>
+
+
+
+    </div>
+    
+    <div class=header>
+    
+       <b> <a href="introduce.html">자기소개</a>/<a href="travel.html">여행</a>/ <a href="loadmap.html">로드맵</a></b>
+
+
+    </div>
+
+    <div class=enter>
+       <input type="text" id="key2" placeholder="id">
+       <input type="text" id="value2" placeholder="password">
+       <input type="button" value="로그인" id="btn2">
+       <input type="button" value="회원가입" id="btn1">
+    <script>
+      $("#btn2").click(function(){
+        let k = $("#key2").val();
+        let v = localStorage.getItem(k);
+
+        console.log(typeof v);
+        if(v != null ){
+            alert(v);
+        else
+        alert("아이디가 존재하지 않습니다.");
+        }
+        localStorage.setItem(k,v);
+        
+      });
+
+
+    </script>
+       
+    </div>
+</body>
+</html>
